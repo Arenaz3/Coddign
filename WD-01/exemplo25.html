@@ -1,0 +1,22 @@
+<meta charset="utf-8" />
+<h1>Jogo de Adivinhação</h1>
+<button onclick="jogar()">
+    Clique Aqui Para Jogar!
+</button>
+<script src="js/pegaNumeroAleatorio.js"></script>
+<script src="js/mostra.js"></script>
+<script>
+    function jogar() {
+    var numeroMisterioso = pegaNumeroAleatorio(0, 10)
+    var chute =  prompt("De um chute sobre o numero misterioso")
+    if (numeroMisterioso == chute)
+        mostra(` <hr>
+        Parabens! você acertou, o numero misterioso era ${numeroMisterioso} !
+        `)
+    if (numeroMisterioso != chute){
+        mostra(` <hr>
+        Que Pena você errou, o numero misterioso era ${numeroMisterioso} !
+        `)
+    }
+    }
+</script>     

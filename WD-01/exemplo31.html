@@ -1,0 +1,37 @@
+<meta charset="utf-8" />
+<h1>Loteria</h1>
+Quantos números você vocé quer sortear? <br>
+<input type="number" id="campoQuantidade">
+<button onclick="jogar()">
+    Clique Aqui Para Jogar!
+</button>
+<script src="js/pegaNumero.js"></script>
+<script src="js/pegaNumeroAleatorio.js"></script>
+<script src="js/mostra.js"></script>
+<script>
+    function jogar() {
+        var quantidade = campoQuantidade.value;
+        var listaNumeros = []
+        while (listaNumeros.length < quantidade) {
+            var numeroMisterioso = pegaNumeroAleatorio(1, 60)
+            listaNumeros.push(numeroMisterioso)
+        }
+        var chute = pegaNumero("Chuta ai:")
+
+        if (listaNumeros.includes(chute) == true) {
+            mostra(`
+            Parabéns, você acertou!
+            Os números  sorteados foram: ${listaNumeros.join(", ")}
+            `)
+        }
+        else {
+            mostra(`
+            Que pena, você errou!
+            Os Numeros sorteados foram: ${listaNumeros.join(", ")}
+            `)
+        }
+    }
+
+
+
+</script>

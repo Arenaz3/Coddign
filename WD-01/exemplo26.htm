@@ -1,0 +1,16 @@
+<meta charset="utf-8" >
+<h1>Máquina de Café</h1>
+<p id="mostrador">
+    Seu Café está sem açúcar...
+</p>
+<script>
+
+    var colheresDeAcucar = 0
+     while (confirm("Quer mais açúcar?") == true) {
+        colheresDeAcucar = colheresDeAcucar + 1
+        mostrador.innerHTML = 
+        `Seu café tem ${colheresDeAcucar} colheres(s) de açúcar
+        `
+    }
+    document.write("Seu Café esta servido!")
+</script>

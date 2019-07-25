@@ -1,0 +1,22 @@
+<meta charset="utf-8" />
+<h1>Lista de convidados</h1>
+<button onclick="adicionar()" id="mensagem">
+    Adicionar Nome 
+</button>
+<p id="convidados">
+        Lista de Convidados: <br>
+</p>
+<script>
+    var lista = []
+    function adicionar()
+    {
+        var nome = prompt("Informe Seu nome")
+        alert( nome + " foi adicionado com sucesso!")
+        lista.push(nome)
+        convidados.innerHTML = ` 
+        Sua lista tem os seguintes nomes: <br>   
+            ${lista.join("//")}
+    `
+    }
+
+</script>

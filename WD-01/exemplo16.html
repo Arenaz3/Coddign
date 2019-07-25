@@ -1,0 +1,25 @@
+<meta charset="utf-8" />
+<h1>Calcular Areas</h1>
+<button onclick="calcularRetangulo()">
+    Calcular Area Do Retangulo
+</button>
+<button onclick="calcularTriangulo()">
+    Calcular Area do Triangulo
+</button>
+<script src="js/pegaNumero.js"></script>
+<script>
+
+function calcularRetangulo() {
+    var base = pegaNumero("Qual a base do Rentagulo");
+    var altura = pegaNumero("Qual a altura do Retangulo");
+document.write("A Area do Retagulo é: " + (base*altura));
+}
+</script>
+
+<script>
+function calcularTriangulo() {
+    var base = pegaNumero("Qual a base do Triangulo");
+    var altura =  prompt("Qual a altura do Triangulo");
+document.write("A Area Do Triangulo é: " + (base*altura)/2 );
+}
+</script>

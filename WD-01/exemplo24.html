@@ -1,0 +1,24 @@
+<meta charset="utf-8" />
+<h1>Salario</h1>
+<script>
+    var nome = prompt("Informe seu nome")
+    var salario = prompt("Infome seu salario").replace(".",  "").replace("," , ".")
+
+    if (salario > 10000){
+        document.write(`
+        ${nome}, Você tem direito a 2% de participação nos lucros
+        `)
+    }
+    if (salario >= 4000 && salario <= 10000){
+
+        document.write(`
+       ${nome}, Você tem direito a 6% da participação nos lucros
+        `)
+    }
+    if (salario < 4000)
+        document.write(`
+        ${nome}, Você Tem Direito a 12% dos lucros
+        
+        `)
+    
+</script>   

@@ -1,0 +1,15 @@
+<meta charset="utf-8"/> <!--Media das Idades-->
+<h1>Média das Idades</h1>
+João = 1993 <br>
+Maria = 1997 <br>
+Regina = 1985 <br>
+<br>
+<Script>
+    var ano_atual = new Date().getFullYear()
+    var idade_joao = ano_atual - 1993;
+    var idade_maria = ano_atual - 1997;
+    var idade_regina = ano_atual - 1985;
+    var media = (idade_joao+idade_maria+idade_regina)/3
+document.write ("A média das idades é : " + media.toFixed(0))
+
+</Script>

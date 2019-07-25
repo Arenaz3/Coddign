@@ -1,0 +1,14 @@
+<meta charset="utf-8" />
+    
+<h1 style="color: brown">Dobrar Salário 💸</h1>
+<script>
+    var nome = prompt("Por favor, digite seu nome:");
+
+    var salario_atual = prompt("Por favor, informe seu salário atual:").replace(",", ".");
+
+    var salario_novo = salario_atual * 2;
+
+    document.write("Nome: " + nome + "<br>");
+    document.write("Salário novo: R$ " + salario_novo.toFixed(2).replace(".", ","))
+
+</script>

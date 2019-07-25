@@ -1,0 +1,15 @@
+<meta charset="utf-8"/> <!--Calculador salario-->
+<h1>Calcular Salário Total</h1>
+<button onclick="pedirNome()">
+    Calcular
+</button>
+<script>
+    function pedirNome() {
+        var nome = prompt ("Diga seu Nome Completo!")
+        var calcular = parseFloat(prompt ("Informe Seu Salário"))
+        var calcBonus =parseFloat(prompt("Informe seu bonus"))
+        document.write("Olá, " + nome + "<br>") 
+        document.write("Seu Novo Salario é R$ " + (calcular + calcBonus + "<br>")).toFixed(2)
+}
+
+</script>

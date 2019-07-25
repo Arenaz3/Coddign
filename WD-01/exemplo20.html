@@ -1,0 +1,30 @@
+<meta charset="utf-8" />
+<h1> Crie sua lista de supermercado</h1>
+<p>
+    Preencha o formulario abaixo para adicionar os itens na sua lista:
+</p>
+Nome Do Item: <br>
+<input type="text" id="campoItem" />
+<button onclick="adicionar()">
+    Adicionar!
+</button>
+<p id="mensagem">
+    Sua Lista esta vazia =( <br>
+</p>
+<script>    
+
+    var lista = []
+    function adicionar()
+    {
+        var item = campoItem.value
+        
+        lista.push(item)
+        alert("O item " + item + " Foi adicionado com sucesso!")
+        mensagem.innerHTML = `
+            Sua lista tem ${lista.length} item (s): <br>
+            ${lista.join("<br>")}
+        
+        `
+        campoItem.value =  ("")
+    }
+</script>

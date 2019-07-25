@@ -1,0 +1,69 @@
+<meta charset="utf-8" />
+<h1>Cadastramento \ Academia caelum </h1>
+<p>
+    Preencha o formulario abaixo para realizar seu cadastro: 
+</p>
+
+Nome: <br>
+<input type="text" id="campoNome" />
+<br><br>
+Peso: <br>
+<input type="text" id="campoPeso" />
+<br><br>
+Altura: <br>
+<input type="text" id="campoAltura" />
+<br><br>
+Data de Nascimento:<br>
+<input type="text" id="campoNascimento" />
+<br><br>
+<input type="checkbox" id="campoTenhoProblemasCardiacos" />
+Tenho Problemas Cardiacos
+<br><br>         
+<button onclick="cadastrar()">
+    Cadastrar
+</button>
+<script src="js/libIdade.js"></script>
+<script src="js/mostra.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.2.0/vanilla-masker.min.js"></script>
+<script>
+    VMasker(campoNascimento).maskPattern('99/99/9999')
+    VMasker(campoAltura).maskPattern('9,99')
+
+    function cadastrar()
+{
+        var nome = campoNome.value;
+        var peso = campoPeso.value;
+        var altura = campoAltura.value;
+        var data = campoNascimento.value;
+        var souCardiaco = campoTenhoProblemasCardiacos.checked;
+        var dataPedacos = data.split("/");  //O comando Split converte de string(Texto) em Arruay(Lista)
+        var dia = dataPedacos[0]
+        var mes = dataPedacos[1]
+        var ano = dataPedacos[2]
+        var idade = calculaIdade( dia, mes, ano )
+        if (idade < 14 || souCardiaco == true) {
+            var frase = "PRECISA DE ACOMPANAMETO MÉDICO"
+            mostra(`
+            `)
+        }
+        else {
+            var frase = "NÃO PRECISA DE ACOMPANHAMENTO MÉDICO"
+        }
+    mostra(`
+    <hr>
+    Seus dados Cadastrais São: <br>
+    Nome: ${nome} <br>
+    Peso: ${peso} kg <br>
+    Altura: ${altura} m <br>
+    Data de Nascimento: ${data} <br>
+    Idade: ${idade} anos
+    <i>${frase}<i>
+    `)    
+    campoNome.value = ''
+    campoPeso.value = ''
+    campoAltura.value = ''
+    campoNascimento.value = ''
+    campoTenhoProblemasCardiacos.checked = false
+}
+
+</script>

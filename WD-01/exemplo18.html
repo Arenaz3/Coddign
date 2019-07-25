@@ -1,0 +1,54 @@
+<meta charset="utf-8" />
+<h1>Buscar Dados do CEP</h1>
+Digite seu CEP: <br>
+<input type="text" id="campoCep" />
+<button onclick="buscarCepDigitado()">
+    Buscar CEP
+</button>
+<br><br>
+Endereço: <br>
+<input type="text" id="campoEndereco" disabled />
+<br><br>
+Bairro: <br>
+<input type="text" id="campoBairro" disabled />
+<br><br>
+Cidade: <br>
+<input type="text" id="campoCidade" disabled />
+<br><br>
+Estado: <br>
+<input type="text" id="campoEstado" disabled />
+<br><br>
+<button onclick="cadastro()">
+    Cadastrar
+</button>
+<script src="js/mostra.js" ></script>
+<script src="js/buscaCep.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.2.0/vanilla-masker.min.js"></script>
+<script>
+
+    //aplica uma mascara de cep no campo
+    VMasker(campoCep).maskPattern('99999-999')
+
+    function buscarCepDigitado() {
+        var cep =campoCep.value.replace('-', '')
+        var dados = buscaCep(cep)
+        campoEndereco.value = dados.endereco
+        campoBairro.value = dados.bairro
+        campoCidade.value = dados.cidade
+        campoEstado.value = dados.estado
+
+    }
+    function cadastro() {
+        var cep = campoCep.value
+        var endereco =  campoEndereco.value
+        var bairro = campoBairro.value
+        var cidade =  campoCidade.value
+        var estado = campoEstado.value
+    
+    mostra(`
+        <hr>
+        Os dados do CEP ${cep} são: <br>
+        ${endereco}, ${bairro} - ${cidade} / ${estado}
+    `)
+}
+</script>
