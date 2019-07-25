@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Positions</title>
+    <style>
+        .box {
+            background-color: silver;
+            padding: 10px;
+            width: 300px;
+            margin: 5px;
+
+        }
+        .relativo {
+            position: relative;
+            top: 60;
+            left: 150px;
+        }
+        .absoluto {
+            position: absolute; 
+            top: 200px;
+            right: 0;
+        }
+        .fixo {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box relativo"> <!-- é a porição padrao do elemtento HTML (nao aceita reposicionamento) -->
+        Posição Relativa
+    </div>
+    <div class="box"> <!-- Aceita reposicionamento dele é semrpe relativo a sua posição -->
+        Posição Etática
+    </div>
+    <div class="box absoluto"> <!-- Absoluete sempre procura um pai e se alinha com base nele -->
+        Posição Absoluta
+    </div>
+    <div class="box fixo">
+        Posição Fixa
+    </div>
+</body>
+
+</html>

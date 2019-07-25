@@ -1,0 +1,136 @@
+*, ::after, ::before {
+    box-sizing: border-box
+}                                                                 /* !IMPORTAN  STYLE */
+
+/* Estilição da pagina */                                        /* #  . elemento */
+body {
+    color: #333;
+    font-size: 16px; 
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/* Centralziador do Layout */
+.conteiner {
+    width: 940px;
+    margin: 0 auto; /* Centraliza o conteiner na tela */
+
+}
+.flex-conteiner {
+    display: flex;  
+    justify-content: space-between;
+    align-items: flex-start; /* Alinhna as caixas na vertical e no inicio */
+    flex-wrap: wrap;  /* Se os itens nao couberem numa linha, cria uma nova */
+}
+
+.cabecalhos {
+    background-image: url('../img/sobre-background.jpg');
+    padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+/* Topo */
+#topo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#topo .sacola {
+    padding-right: 36px;
+    width: 140px;
+    text-align: right;
+    font-size: 14px;
+    background-image: url('../img/sacola.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1; 
+}
+#topo .menu-opcoes {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#topo .menu-opcoes li {
+    display: inline;
+    margin-left: 15px;
+
+}
+/* Rodapé */
+#rodape {
+    background-image: url('../img/fundo-rodape.png');
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+#rodape .flex-conteiner {
+    align-items: center;
+}
+
+#rodape .social li {
+    display: inline;
+    margin-left: 15px;
+}
+
+#rodape .social a {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    text-indent: -9999px
+}
+
+#rodape .social a[href *= 'facebook.com'] {
+    background-image: url('../img/facebook.png');
+}
+#rodape .social a[href *= 'google.com'] {
+    background-image: url('../img/googleplus.png');
+}
+#rodape .social a[href *= 'twitter.com'] {
+    background-image: url('../img/twitter.png');
+}
+
+
+/* Mobile */
+@media (max-width: 630px) {
+    .conteiner {
+        width: 96%;
+    }
+    #topo .sacola {
+        position: fixed;
+        text-indent: -9999px;
+        bottom: 5px;
+        right: 5px;
+        width: 60px;
+        height: 60px;
+        background-position: center center;
+        border-radius: 80px;
+        border: 2px solid blue;
+        text-align: initial;
+        top: initial;
+        background-color: white;
+    }  
+    #topo h1 {
+        text-align: center;
+    }
+    #topo .menu-opcoes {
+        position: static;
+        text-align: center;
+        margin-top: 15px;
+    }
+    #topo .menu-opcoes li {
+        margin:  8px;
+        display: inline-block;
+    }
+    #rodape {
+        padding-bottom: 70px;
+    }
+    #rodape li:first-child {
+        margin-left: 0px;
+
+    }
+}

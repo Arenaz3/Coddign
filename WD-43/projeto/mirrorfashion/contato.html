@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contato | Mirro fashion</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/geral.css" />
+    <link rel="stylesheet" href="css/contato.css" />
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header id="topo" class="conteiner">
+        <h1>
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo Mirror Fashion" />
+            </a>
+        </h1>
+        <p class="sacola">
+            Nenhum Item na sua sacola de compras
+        </p>
+        <nav class="menu-opcoes">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prdutos.index">Produtos</a></li>
+                <li><a href="cartao-fidelidade.html">Cartão Fidelidade</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="conteudo" class="conteiner">
+        <article class="pagina-contato">
+            <header class="cabecalhos">
+                <h2>Contato</h2>
+            </header>
+            <div class="flex-conteiner">
+                <form action="enviar-email.php">
+                    <p>
+                        Para entrar em contato, preencha o formulario   abaixo:</p>
+                    <br><br>
+                    <label for="nome">
+                        <strong>Nome:</strong>
+                    </label>
+                    <input type="text" name="nome" id="nome" placeholder="Por Favor, preencha seu nome" required>
+
+
+                    <label for="email">
+                        <strong>E-mail:</strong>
+                    </label>
+                    <input type="email" name="email" id="email" placeholder="Informe seu email" required />
+
+
+                    <label for="assunto">
+                        <strong>Assunto:</strong>
+                    </label>
+                    <input type="text" name="assunto" id="assunto" placeholder="Por favor, preencha o assunto"
+                        required />
+
+
+                    <label for="mensagem">
+                        <strong>Mensagem:</strong> <br>
+                        <textarea name="mensagem" id="mensagem" rows="7" placeholder="Por favor, preencha sua mensagem"
+                            required></textarea>
+
+
+                        <button class="btn">
+                            Enviar
+                        </button>
+
+                    </label>
+                </form>
+                <aside>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58692.97053520256!2d-50.00335840524649!3d-23.158859180226475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c026544d26f253%3A0xc66dac11dad56f73!2sJacarezinho%2C+State+of+Paran%C3%A1%2C+86400-000!5e0!3m2!1sen!2sbr!4v1564076275722!5m2!1sen!2sbr"
+                        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <p>
+                        Rua Fim do Mundo, S/N Sao Paulo - SP.
+                    </p>
+
+                </aside>
+            </div>
+        </article>
+    </main>
+    <!-- Rodapé -->
+    <footer id="rodape">
+        <div class="conteiner flex-conteiner">
+            <img src="img/logo-rodape.png" alt="Logo Da Mirror Fashion" />
+            <nav class="social">
+                <ul>
+                    <li><a href="http://facebook.com">Facebook</a></li>
+                    <li><a href="http://twitter.com">Twitter</a></li>
+                    <li><a href="http://plus.google.com">Google+</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <!-- FIM do Rodapé -->
+</body>
+
+</html>

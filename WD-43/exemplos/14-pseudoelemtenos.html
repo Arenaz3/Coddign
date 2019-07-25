@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Pseudos Elementos</title>
+    <style>
+    .traco-antes::before {
+        content: '----';
+    }
+    .traco-depois::after {
+        content: '------';
+    }
+    .selecao-especial::selection{
+        background:yellow;
+        color: red;
+    }
+    .primeira-letra::first-letter {
+        font-weight: bold;
+        font-size: 40px;
+        font-family: 'Courier New', Courier, monospace
+    }
+    .primeira-linha::first-line {
+        font-variant: small-caps
+    }
+    </style>
+</head>
+<!-- ::after = permite inserir conteudos depois do conteudo do elemetno -->
+<!-- ::before =  permite inserir conteudos antes do conteudo do elemento  -->
+<!-- ::selection = permite estilizar a celceção de um conteudo -->
+<!-- ::first-letter = permite formatar a 1 letra de um conteudo -->
+<!-- ::first-line = permite eslizar a 1 linha de um conteudo  -->
+<body>
+<p class="traco-antes">
+    Conteudo com traco no comeco
+</p>
+<p class="traco-depois">
+    Conteudo com traco no final
+</p>
+<p class="selecao-especial">
+    Conteudo selecao especial
+</p>
+<p class="primeira-letra primeira-linha">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis et eius quia temporibus enim earum consequatur hic optio. Corporis consequatur dicta non perspiciatis minus accusamus amet nam voluptatem soluta et?         
+
+</p>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Float/Clear</title>
+    <style>
+        .conteudo {
+            width: 500px;
+            padding: 20px;
+            border: 1 solid black;
+            background-color: silver;
+            margin: 20px auto
+                /* Centralizar Blocos */
+        }
+
+        .conteudo img {
+            width: 250px;
+            height: auto;
+            float: left;
+            margin-right: 20px
+        }
+
+        .conteiner {
+            width: 700px;
+            display:table
+        }
+
+        .conteiner .coluna1 .conteiner .coluna2 {
+            width: 50%;
+            float: left
+        }
+
+        .conteiner img {
+            width: 100%
+        }
+
+        .clearfix {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteudo">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam iste exercitationem earum magnam voluptatem
+            provident eveniet, vel aliquam quibusdam sint, voluptatibus quas consequatur quae. Porro sit ipsa repellat
+            cumque earum.</p>
+        <p>Sint unde ipsum molestiae quasi alias, facere aliquam architecto tempora deleniti. Molestias provident animi
+            ex doloremque commodi ea quo. Culpa error impedit provident. Earum nemo facere dolorum dolore ullam vero.
+        </p>
+        <img src="thelorean.jpg" width="250" alt="the lorean" />
+        <p>Saepe at, maxime soluta beatae quibusdam provident vel rem quisquam ex assumenda, fuga magni distinctio? Eius
+            nemo quos labore dolore sit, repellat expedita quia modi, sequi laborum beatae culpa vitae!</p>
+        <p>Incidunt rerum ipsam voluptatum dicta distinctio id nesciunt nulla similique accusamus! Sequi ducimus libero
+            ex, eum aut alias quae, natus qui sapiente ipsam ut similique deserunt dignissimos nihil cumque? Non?</p>
+        <p>Enim nam similique, aperiam ullam magnam nesciunt cum facilis odit perspiciatis culpa at neque deserunt
+            deleniti voluptas quo odio quas alias possimus vero corrupti quae expedita? Dolorem ipsum aliquam porro!</p>
+        <p>Explicabo culpa minima fugiat aliquam temporibus nulla impedit asperiores. Porro in error reprehenderit
+            molestias! Aut, minima nostrum qui tempora doloribus velit eligendi laborum dolore saepe obcaecati esse,
+            labore quas eveniet!</p>
+        <p>Laboriosam, similique. Soluta quam tempore, maxime aspernatur facere enim inventore molestias maiores in
+            pariatur adipisci assumenda doloribus. Maiores ex reiciendis enim, aut rerum iusto recusandae et vitae
+            similique! Voluptatibus, ipsa?</p>
+        <p>Modi, nihil sunt dolor recusandae beatae, doloremque rem voluptate dignissimos nulla, mollitia dolorem
+            laudantium similique hic porro suscipit ducimus numquam eius ex id sequi magni. Nihil sed sequi ratione
+            autem?</p>
+        <p>Earum, qui. Repellendus neque minima aliquam doloremque enim beatae quae minus pariatur laboriosam quam
+            illum, earum ab eaque autem, animi magni non est id veniam? Magni dicta soluta rem temporibus!</p>
+        <p>Quisquam, laborum! Pariatur, officia facere asperiores voluptatibus eligendi ut, iusto architecto odio amet
+            recusandae tempore, mollitia rerum commodi doloribus debitis fuga necessitatibus placeat quaerat dolore
+            laborum doloremque totam nihil. Nesciunt.</p>
+    </div>
+    <br>
+    <div class="conteudo conteiner">
+        <div class="coluna1">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, provident, est id amet dolore odio
+                similique asperiores natus nostrum cupiditate molestiae eaque fugiat quia libero quasi consectetur.
+                Magni, aliquid natus!</p>
+            <p>Qui optio minus nulla? Deserunt cum labore eveniet explicabo eaque ut vero ducimus, neque mollitia dolore
+                vel cupiditate rem eligendi fugiat minima quis a accusantium ratione maiores aliquam numquam tempore?
+            </p>
+            <p>Sit obcaecati repudiandae nobis sequi quia beatae officiis, voluptas reiciendis eius impedit pariatur
+                veritatis animi atque fugit at dolor iste amet aliquid quae iure asperiores odit vitae illum blanditiis.
+                Est.</p>
+
+        </div>
+        <div class="coluna2">
+            <img src="thelorean.jpg" width="250" alt="the loreans" />
+        </div>
+        <!-- <div class="clearfix"></div> -->
+    </div>
+</body>
+
+</html>

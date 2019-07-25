@@ -1,0 +1,152 @@
+.pagina-produto .produto {
+    margin-top: 40px;
+    color: #333;
+    line-height: 1.3;
+}
+
+.pagina-produto .produto h3 {
+    font-size: 34px;
+    font-weight: bold;
+}
+.pagina-produto p {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 34px;
+}
+.pagina-produto .produto legend {
+    display: block;
+    text-transform: uppercase;
+}
+
+/* Cores */
+.pagina-produto .cores {
+    padding-top: 90px;
+}
+.pagina-produto .cores label::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 6px solid rgba(0, 0,  0, 0);
+    position: absolute;
+    top: 30px;
+    transition: 1s;
+    
+}   
+.pagina-produto label[for=verde]::after {
+    background-color: #33CC66;
+    left: 0;
+}
+.pagina-produto label[for=rosa]::after {
+    background-color: #ff6666;
+    left: 70px;
+}
+.pagina-produto label[for=azul]::after {
+    background-color: #6666ff;
+    left: 140px;
+}
+.pagina-produto input[type=radio] {
+    display: none
+}
+.pagina-produto input:checked + label::after {
+    border-color: rgba(0, 0, 0, 0.3);
+}
+.pagina-produto input:not(:checked) + label img {
+    display: none;   
+}
+.pagina-produto fieldset {
+    margin-bottom: 20px;
+    position: relative;
+}
+.pagina-produto .cores legend {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pagina-produto label img {
+    width: 90%;
+}
+.pagina-produto .comprar {
+    background-color: #91bd3c;
+    border: none;
+    color: #333;
+    font-size: 26px;
+    text-transform: uppercase;
+    box-shadow: 0  1px 3px #777;
+    padding: 13px 26px;
+    cursor: pointer;
+}
+
+/* Detalhes */
+.pagina-produto .detalhes {
+    padding: 40 0;
+}
+
+.pagina-produto .detalhes h4 {
+    font-size:28px;
+    line-height: 2;
+}
+
+.pagina-produto .detalhes p {
+    margin: 20px 0;
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 690px;
+}
+.pagina-produto .detalhes table {
+    width: 100%;
+    border-spacing: 1px;
+    border-collapse: separate;
+}
+.pagina-produto .detalhes thead {
+    background-color: #999
+}
+.pagina-produto .detalhes thead th {
+    font-weight: bold;
+    padding: 14px;
+}
+.pagina-produto .detalhes td {
+    padding: 10px;
+}
+.pagina-produto .detalhes tr:nth-child(even) {
+    background-color: #CCC;
+}
+.pagina-produto .detalhes td:first-child { 
+    font-style: italic
+}
+/* Desktoop */
+@media (min-width: 630px) {
+    .pagina-produto .produto {
+        position: relative;
+        padding-left: 40%;
+
+    }
+    .pagina-produto .cores {
+        position: static;
+        padding: 0;
+    }
+    .pagina-produto .cores label::after {
+        position: static;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .pagina-produto .cores label img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        max-width: 35%;
+        max-height: 100%;
+    }
+    .pagina-produto .cores legend {
+        position: static;
+    }
+    .pagina-produto fieldset {
+        display: inline-block;
+        vertical-align: top;
+        margin: 16px 0ç;
+        min-width: 240px;
+        width: 45%;
+    }
+}

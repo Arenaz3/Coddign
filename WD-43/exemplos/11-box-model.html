@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Box Model</title>
+    <style>
+        * {
+            /* Considerar como largura total do box o width a borda e o padding */
+            box-sizing: border-box;
+        }
+
+        .conteiner {
+            width: 700px;
+            border: 1px solid black;
+            margin: 5px auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+        Box Model Padrão <br>
+        Este Box tem 702 px de largura <br>
+        700px (width) + bora de 1px (left) + borda 1px (rigth)
+    </div>
+</body>
+
+</html>
